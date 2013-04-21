@@ -1,4 +1,5 @@
 # coding=UTF-8
+# @author sundebiao
 
 import os.path
 import xlrd
@@ -91,13 +92,3 @@ class ParseXls(object):
 		except Exception, e:
 			print e
 			return False
-
-# TEST
-filename = 'backup2.xls'
-xlsObj = ParseXls(filename, True)
-print xlsObj.getCell(0, 0)
-exit()
-data = xlsObj.readXls()
-for row in data:
-	print row
-exit()
